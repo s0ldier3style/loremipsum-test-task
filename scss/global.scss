@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  color: unset;
+  text-decoration: unset;
+  list-style-type: none;
+  position: relative;
+  line-height: normal;
+}
+
+body {
+  font-family: "Lato";
+  color: $white-color;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.text-blue-color {
+  color: $blue-color;
+}
+
+input[type="range"] {
+  appearance: none;
+  width: 100%;
+  border-radius: 5px;
+}
+
+input[type="range"]:focus {
+  outline: none;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+}
