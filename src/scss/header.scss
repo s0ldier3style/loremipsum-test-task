@@ -1,0 +1,139 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(16, 16, 29, 0.9);
+  padding: 30px 0;
+  z-index: 1000;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__logo {
+    font-family: "Raleway";
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    color: $white-color;
+  }
+
+  &__menu {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $white-color;
+    font-size: 13px;
+    transition: $blue-color 0.3s;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $blue-color;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__menu {
+    gap: 20px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__container {
+      position: relative;
+      width: 100%;
+      justify-content: space-between;
+      padding: 10px 20px;
+      align-items: center;
+    }
+
+    &__menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    &__menu.active {
+      display: flex;
+    }
+
+    &__burger {
+      display: block;
+      width: 30px;
+      height: 20px;
+      position: absolute;
+      right: 15%;
+      top: 65%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    &__burger span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: white;
+      position: relative;
+    }
+
+    &__burger span::before,
+    &__burger span::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: white;
+      position: absolute;
+      left: 0;
+    }
+
+    &__burger span::before {
+      top: -8px;
+    }
+
+    &__burger span::after {
+      top: 8px;
+    }
+  }
+}
+
+@media (320px <= width <= 480px) {
+  .header {
+    padding: 5px 0;
+
+    &__container {
+      width: 100%;
+      margin-inline: 0.5rem;
+      margin-block: 1rem;
+    }
+
+    &__logo {
+      font-size: 19px;
+    }
+
+    &__link {
+      font-size: 14px;
+    }
+  }
+}
