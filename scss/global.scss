@@ -28,6 +28,11 @@ body {
   color: $blue-color;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
+
 input[type="range"] {
   appearance: none;
   width: 100%;
